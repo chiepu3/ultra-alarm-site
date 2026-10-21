@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="application-name" content="UltraAlarm for Android">
+  <meta name="description" content="UltraAlarm for Android が使用するオープンソースソフトウェア、AI、データのライセンス表記です。">
+  <title>ライセンス | UltraAlarm for Android</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="alternate" hreflang="ja" href="licenses.html">
+  <link rel="alternate" hreflang="en" href="en/licenses.html">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ</a>
+  <header class="site-header shell">
+    <a class="brand" href="index.html"><img src="assets/icon.svg" width="108" height="108" alt="">UltraAlarm</a>
+    <nav class="header-nav" aria-label="メインメニュー"><a href="index.html#features">機能</a><a href="index.html#setup">使い方</a><a href="index.html#phones">対応端末</a></nav>
+    <nav class="languages" aria-label="言語"><span lang="ja" aria-current="true">日本語</span><a href="en/licenses.html" lang="en" hreflang="en">English</a></nav>
+  </header>
+  <main id="main" class="shell" tabindex="-1">
+    <article class="document license-document">
+      <header class="page-heading">
+        <p class="eyebrow">UltraAlarm for Android</p>
+        <h1>ライセンス</h1>
+        <p>2026年10月14日時点</p>
+      </header>
+      <div class="prose">
+        <p>このアプリで使用しているAI、ソフトウェア、データのライセンスを掲載しています。ライセンス名のリンクから、ライセンス全文や使用許諾契約を確認できます。</p>
+        <h2>判定に使うAI</h2>
+        <p>AIはアプリに同梱せず、選んだものを Hugging Face からダウンロードします。Gemma 4 は litert-community による LiteRT-LM 形式、Qwen3.5 は unsloth による GGUF 形式への変換版を使用します。</p>
+        <div class="table-scroll" role="region" aria-label="判定に使うAIのライセンス" tabindex="0">
+          <table>
+            <caption>判定に使うAIのライセンス</caption>
+            <thead><tr><th scope="col">AI</th><th scope="col">提供元</th><th scope="col">ライセンス</th><th scope="col">ダウンロード元</th></tr></thead>
+            <tbody><tr><td>Gemma 4 E2B / E4B</td><td>Google</td><td><a href="assets/licenses/apache-2.0.txt">Apache License 2.0</a></td><td><a href="https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm">E2B</a> / <a href="https://huggingface.co/litert-community/gemma-4-E4B-it-litert-lm">E4B</a></td></tr>
+<tr><td>Qwen3.5 2B / 4B</td><td>Qwen (Alibaba Cloud)</td><td><a href="assets/licenses/apache-2.0.txt">Apache License 2.0</a></td><td><a href="https://huggingface.co/unsloth/Qwen3.5-2B-GGUF">2B</a> / <a href="https://huggingface.co/unsloth/Qwen3.5-4B-GGUF">4B</a></td></tr>
+<tr><td>Qwen3-VL 2B</td><td>Qwen (Alibaba Cloud)</td><td><a href="assets/licenses/apache-2.0.txt">Apache License 2.0</a></td><td><a href="https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct-GGUF">2B</a></td></tr>
+</tbody>
+          </table>
+        </div>
+        <h2>アプリに含まれるソフトウェア</h2>
+        <div class="table-scroll" role="region" aria-label="アプリに含まれるソフトウェア" tabindex="0">
+          <table>
+            <caption>アプリに含まれるソフトウェア</caption>
+            <thead><tr><th scope="col">ソフトウェア</th><th scope="col">権利者</th><th scope="col">ライセンス</th></tr></thead>
+            <tbody><tr><td>LiteRT-LM</td><td>Google</td><td><a href="assets/licenses/apache-2.0.txt">Apache License 2.0</a></td></tr>
+<tr><td>llama.cpp / ggml (v0.6.0)</td><td>The ggml authors</td><td><a href="assets/licenses/llama-cpp.txt">MIT</a></td></tr>
+<tr><td>KleidiAI (v1.24.0)</td><td>Arm Limited</td><td><a href="assets/licenses/apache-2.0.txt">Apache License 2.0</a></td></tr>
+<tr><td>xxHash</td><td>Yann Collet</td><td><a href="assets/licenses/xxhash.txt">BSD 2-Clause</a></td></tr>
+<tr><td>stb_image</td><td>Sean Barrett</td><td><a href="assets/licenses/stb.txt">MIT / Public Domain</a></td></tr>
+<tr><td>miniaudio</td><td>David Reid</td><td><a href="assets/licenses/unlicense.txt">Public Domain / MIT-0</a></td></tr>
+<tr><td>subprocess.h</td><td>Neil Henning</td><td><a href="assets/licenses/unlicense.txt">Unlicense (Public Domain)</a></td></tr>
+<tr><td>SHA-1 / SHA-256</td><td>Steve Reid / Igor Pavlov</td><td>Public Domain</td></tr>
+<tr><td>Android Jetpack<small>Compose, Material 3, CameraX, WorkManager, Navigation, Lifecycle, Activity, Fragment, Graphics Shapes</small></td><td>Google</td><td><a href="assets/licenses/apache-2.0.txt">Apache License 2.0</a></td></tr>
+<tr><td>Kotlin / kotlinx.coroutines</td><td>JetBrains</td><td><a href="assets/licenses/apache-2.0.txt">Apache License 2.0</a></td></tr>
+<tr><td>Google Play Billing Library</td><td>Google</td><td><a href="https://developer.android.com/studio/terms">Android SDK License Agreement</a></td></tr>
+</tbody>
+          </table>
+        </div>
+        <h2>データ</h2>
+        <div class="table-scroll" role="region" aria-label="データのライセンス" tabindex="0">
+          <table>
+            <caption>データのライセンス</caption>
+            <thead><tr><th scope="col">データ</th><th scope="col">提供元</th><th scope="col">ライセンス</th></tr></thead>
+            <tbody><tr><td><a href="https://github.com/holidays-jp/api">日本の祝日API</a><small>内閣府「国民の祝日について」のデータをもとにしています。</small></td><td>holidays-jp</td><td><a href="assets/licenses/holidays-jp.txt">MIT</a></td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer shell">
+    <p>UltraAlarm for Android</p>
+    <nav class="footer-links" aria-label="サイト情報"><a href="privacy.html">プライバシーポリシー</a><a href="terms.html">利用規約</a><a href="licenses.html" aria-current="page">ライセンス</a><a href="contact.html">お問い合わせ</a></nav>
+  </footer>
+</body>
+</html>

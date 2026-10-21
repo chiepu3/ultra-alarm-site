@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex">
+  <title>ページが見つかりません | UltraAlarm for Android</title>
+  <!-- エラーが起きたURLの深さによらず表示できるよう、このページのCSSは埋め込みます。 -->
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; background: #f7f4ec; color: #1b1c19; line-height: 1.8; }
+    body { margin: 0; padding: 48px 24px; }
+    main { max-width: 640px; margin: 8vh auto; }
+    .code { color: #0e5c50; font-size: 5rem; font-weight: 800; line-height: 1.2; margin: 24px 0; }
+    h1 { font-size: clamp(1.5rem, 5vw, 2rem); line-height: 1.5; }
+    a { display: inline-block; padding: 12px 24px; border-radius: 999px; background: #0e5c50; color: white; font-weight: 700; text-decoration: none; }
+    a:focus-visible { outline: 3px solid #0e5c50; outline-offset: 5px; }
+    .english { border-top: 1px solid #bfc9c3; margin-top: 40px; padding-top: 24px; }
+    .english h2 { font-size: 1.3rem; }
+    @media (prefers-color-scheme: dark) {
+      :root { background: #111412; color: #e1e3df; }
+      .code { color: #7fd6c2; }
+      a { background: #7fd6c2; color: #00382f; }
+      a:focus-visible { outline-color: #7fd6c2; }
+      .english { border-color: #404944; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p>UltraAlarm for Android</p>
+    <p class="code">404</p>
+    <h1>ページが見つかりません</h1>
+    <p>URLを確認するか、トップページから開き直してください。</p>
+    <a id="home-ja" href="./index.html">日本語トップへ</a>
+    <div class="english" lang="en">
+      <h2>Page not found</h2>
+      <p>Please check the URL or return to the home page.</p>
+      <a id="home-en" href="./en/index.html">English home page</a>
+    </div>
+  </main>
+  <script>
+    // 独自ドメインと GitHub Pages のプロジェクトURLの両方で、親をたどってトップを探します。
+    (async () => {
+      let directory = new URL(".", location.href);
+      while (true) {
+        try {
+          const response = await fetch(new URL("index.html", directory));
+          if (response.ok && (await response.text()).includes('<meta name="application-name" content="UltraAlarm for Android">')) {
+            document.getElementById("home-ja").href = new URL("index.html", directory).href;
+            document.getElementById("home-en").href = new URL("en/index.html", directory).href;
+            break;
+          }
+        } catch { /* 親のディレクトリでも探します。 */ }
+        const parent = new URL("../", directory);
+        if (parent.href === directory.href) break;
+        directory = parent;
+      }
+    })();
+  </script>
+</body>
+</html>
